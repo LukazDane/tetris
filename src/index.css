@@ -46,7 +46,7 @@ code {
   --cols: 10;
   --rows: 18;
   --tile-size: 20px;
-  --border-width: 5px;
+  --border-width: 3px;
 }
 
 /* Colors */
@@ -98,5 +98,12 @@ code {
   display: grid;
   grid-template-columns: repeat(var(--cols), var(--tile-size));
   grid-gap: 0;
+  align-self: flex-start;
+}
+
+/* Next Block */
+.next-block {
+  display: grid;
+  grid-template-columns: repeat(4, var(--tile-size));
   align-self: flex-start;
 }
