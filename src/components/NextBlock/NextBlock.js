@@ -1,6 +1,5 @@
 import React from "react";
-import GridSquare from "./GridSquare";
-
+import GridSquare from "../GridSquare/GridSquare";
 // Draws the "next" block view showing the next block to drop
 export default function NextBlock(props) {
   const box = [
