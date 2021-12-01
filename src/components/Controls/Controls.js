@@ -5,6 +5,7 @@ import { moveDown, moveLeft, moveRight, rotate } from "../../actions";
 export default function Controls(props) {
   const dispatch = useDispatch();
   const isRunning = useSelector((state) => state.isRunning);
+  const gameOver = useSelector((state) => state.game.gameOver);
 
   return (
     <div className="controls">
