@@ -59,20 +59,6 @@ const gameReducer = (state = defaultState(), action) => {
         newState.grid = newGrid;
         return { ...state, gameOver: true };
       }
-
-      // reset somethings to start a new shape/block
-      const newState = defaultState();
-      newState.grid = newGrid;
-      newState.shape = nextShape;
-      newState.score = score;
-      newState.isRunning = isRunning;
-
-      newState.score = score + checkRows(newGrid);
-
-      return newState;
-
-      // If not place the block
-      const newGrid = addBlockToGrid(shape, grid, x, y, rotation);
       // reset some things to start a new shape/block
       const newState = defaultState();
       newState.grid = newGrid;
