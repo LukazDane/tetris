@@ -45,7 +45,7 @@ code {
   --tile-size: 20px for example will set size of the grid squares. */
   --cols: 10;
   --rows: 18;
-  --tile-size: 20px;
+  --tile-size: calc(10px + 2vh);
   --border-width: 3px;
 }
 
@@ -118,13 +118,16 @@ code {
 /* Score Board */
 .score-board-button {
   display: block;
-  padding: 1em;
+  padding: 0.2em;
   border-width: 5px;
   border-top-color: var(--button-color-t);
   border-left-color: var(--button-color-l);
   border-right-color: var(--button-color-r);
   border-bottom-color: var(--button-color-b);
-  border-radius: 10px;
+  border-radius: 50%;
+  font-size: 5vh;
+  text-align: center;
+  line-height: 0;
 }
 
 /* App */
@@ -161,6 +164,7 @@ and 'b'. The '.' represents an empty cell on the grid. */
   grid-area: b;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* Control Button */
@@ -169,12 +173,17 @@ and 'b'. The '.' represents an empty cell on the grid. */
   width: var(--size);
   height: var(--size);
   text-align: center;
+  font-size: x-large;
   display: block;
   border-width: 5px;
   border-top-color: var(--button-color-t);
   border-left-color: var(--button-color-l);
   border-right-color: var(--button-color-r);
   border-bottom-color: var(--button-color-b);
+  margin: 1% 4%;
+}
+button.control-button.blank {
+  visibility: hidden;
 }
 
 /* Message Popup Styles */

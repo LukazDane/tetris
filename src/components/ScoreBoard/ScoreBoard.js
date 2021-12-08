@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { pause, resume, restart } from "../../actions";
+import { FaPauseCircle, FaPlayCircle } from "react-icons/fa";
+import { RiRestartFill } from "react-icons/ri";
 
 export default function ScoreBoard(props) {
   const dispatch = useDispatch();
@@ -8,8 +10,8 @@ export default function ScoreBoard(props) {
   const { score, isRunning, gameOver } = game;
   return (
     <div className="score-board">
-      <div>Score:{score}</div>
-      <div>Level: 1</div>
+      <div className="score">Score:{score}</div>
+      <div className="level">Level: 1</div>
       <button
         className="score-board-button"
         onClick={(e) => {
@@ -23,7 +25,7 @@ export default function ScoreBoard(props) {
           }
         }}
       >
-        {isRunning ? "Pause" : "Play"}
+        {isRunning ? <FaPauseCircle /> : <FaPlayCircle />}
       </button>
       <button
         className="score-board-button"
@@ -31,7 +33,7 @@ export default function ScoreBoard(props) {
           dispatch(restart());
         }}
       >
-        Restart
+        <RiRestartFill />
       </button>
     </div>
   );

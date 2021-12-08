@@ -8,6 +8,7 @@ import {
   RESTART,
   GAME_OVER,
 } from "../actions";
+
 import {
   defaultState,
   nextRotation,
@@ -48,6 +49,7 @@ const gameReducer = (state = defaultState(), action) => {
         // If so move the block
         return { ...state, y: maybeY };
       }
+
       const obj = addBlockToGrid(shape, grid, x, y, rotation);
       const newGrid = obj.grid;
       const gameOver = obj.gameOver;
